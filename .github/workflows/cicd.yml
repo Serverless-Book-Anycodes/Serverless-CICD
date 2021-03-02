@@ -15,7 +15,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Initializing Serverless-Devs
       uses: Serverless-Devs/serverless-devs-initialization-action@main
       with:
@@ -23,6 +22,7 @@ jobs:
         AccessKeyID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
         AccessKeySecret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
         AccountID: ${{ secrets.ALIYUN_ACCOUNT_ID }}
-
+    - name: Config
+      run: sudo --preserve-env s config add -p alibaba --AccessKeyID "$INPUT_ACCESS_KEY_ID" --AccessKeySecret "$INPUT_ACCESS_KEY_SECRET" --AccountID "$INPUT_ACCOUNT_ID"
     - name: Deploying
       run: sudo --preserve-env s deploy
