@@ -2,7 +2,7 @@ name: serverless CI/CD
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 env:
   REGION: cn-hongkong
