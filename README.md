@@ -1,3 +1,3 @@
 # 帮助文档
 
-- 配套章节：Serverless CICD实践案例
+- 配套章节：Serverless CI/CD实践案例
