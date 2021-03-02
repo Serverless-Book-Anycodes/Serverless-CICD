@@ -4,10 +4,6 @@ on:
   push:
     branches: [master]
 
-env:
-  REGION: cn-hongkong
-  TIMEOUT: 300
-
 jobs:
   serverless-cicd-job:
     name: Serverless cicd
